@@ -12,33 +12,6 @@
 
 <!-- ABOUT THE PROJECT -->
 
-## The Project
-
-- DB Diagram
-  <br>
-  <img src="public/images/doc/dbdiagram.jpg" alt="Page" width="250" height="300">
-
-- Page Dashboard
-  <br>
-  <img src="public/images/doc/page_dashboard.jpg" alt="Page" width="650" height="300">
-
-- Page Cars
-  <br>
-  <img src="public/images/doc/page_cars.jpg" alt="Page" width="650" height="300">
-
-- Page Filter Cars Size
-  <br>
-  <img src="public/images/doc/page_filter_small.jpg" alt="Page" width="650" height="300">
-  <img src="public/images/doc/page_filter_medium.jpg" alt="Page" width="650" height="300">
-  <img src="public/images/doc/page_filter_large.jpg" alt="Page" width="650" height="300">
-
-- Page Add Car
-  <br>
-  <img src="public/images/doc/page_add_car.jpg" alt="Page" width="650" height="300">
-
-- Page Edit Car
-  <br>
-  <img src="public/images/doc/page_edit_car.jpg" alt="Page" width="650" height="300">
 
 ### Built With
 
@@ -55,41 +28,40 @@
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/AldiAgeng/car-management-dashboard.git
+   git clone https://github.com/hy-reza/Car-Management-Dashboard.git
    ```
 2. Install packages
    ```sh
-   yarn install
+   npm install
    ```
 3. Next Step
 
    ```sh
-   - setting config.json
-
-   - sequelize db:create
-   - sequelize db:migrate
-   - sequelize db:seed:all
+   - setting config.js / .env
+   - npx sequelize db:create
+   - npx sequelize db:migrate
+   - npx sequelize db:seed:all
    ```
 
 4. Run
    ```sh
-   yarn start
+   npm start
    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Info
 
-- Get all cars : GET <code>/cars</code>
-- Create a car : POST <code>/cars/create</code>
-- Update a car : PUT <code>/cars/update/:id</code>
-- Delete a car : DELETE <code>/cars/delete/:id</code>
+### Api Routes
+- Get all cars : GET <code>/api/vi/cars/</code>
+- Create a car : POST <code>/api/vi/cars/</code>
+- Update a car : PUT <code>/api/vi/cars/:id</code>
+- Delete a car : DELETE <code>/api/vi/cars/:id</code>
 
-- Filter size car : GET <code>/cars/search/?car_size=</code>
-- Search cars by name and size : GET <code>/cars/search/?q=</code>
+### Page Routes
+- Get Dashboard Page : GET <code>/</code>
+- Get Cars Page      : GET <code>/cars</code>
+- Get Add Cars Page  : GET <code>/addCars</code>
+- Get Update Cars Page : GET <code>/editCars/:id</code>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
