@@ -19,6 +19,10 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
+      car_type: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
       car_photo: {
         type: Sequelize.STRING,
         allowNull: false,
@@ -27,11 +31,15 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
       },
-      created_at: {
+      car_availability: {
+        type: Sequelize.BOOLEAN,
+        allowNull: false,
+      },
+      createdAt: {
         type: Sequelize.DATE,
         allowNull: false,
       },
-      updated_at: {
+      updatedAt: {
         type: Sequelize.DATE,
         allowNull: false,
       },

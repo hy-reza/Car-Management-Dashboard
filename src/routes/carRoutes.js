@@ -1,8 +1,15 @@
-const router = require('express').Router()
-const {getCars} = require('../controllers/carCotrollers.js')
+const router = require("express").Router();
+const {
+  getCars,
+  postCars,
+  updateCars,
+  deleteCars,
+} = require("../controllers/carCotrollers.js");
+const uploadFile = require("../middleware/uploadFile.js")
 
+router.get("/", getCars);
+router.post("/", uploadFile, postCars);
+router.put("/:id", uploadFile, updateCars);
+router.delete("/:id", deleteCars);
 
-router.get('/', getCars)
-
-
-module.exports = router
+module.exports = router;

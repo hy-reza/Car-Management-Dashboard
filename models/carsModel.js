@@ -17,6 +17,10 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
+      car_type: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
       car_photo: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -25,13 +29,10 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.INTEGER,
         allowNull: false,
       },
-      created_at: {
-        type: DataTypes.DATE,
+      car_availability: {
+        type: DataTypes.BOOLEAN,
         allowNull: false,
-      },
-      updated_at: {
-        type: DataTypes.DATE,
-        allowNull: false,
+        defaultValue: true,
       },
     },
     {
