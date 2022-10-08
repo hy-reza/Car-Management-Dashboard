@@ -22,6 +22,12 @@
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+### Tabel database
+
+![erd](./views/assets/doc/db.png)
+
+
+
 ## Getting Started
 
 ### Installation
