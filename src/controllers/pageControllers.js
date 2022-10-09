@@ -9,7 +9,7 @@ exports.getDashboardPage = (req, res) => {
     res
       .status(200)
       .render("index", {
-        layout: "layouts/mainLayout",
+        layout: "mainLayout",
         title: "Dashboard",
         breadcrumbs: ["Dashboard"],
       });
@@ -55,7 +55,7 @@ exports.getCarsPage = async (req, res) => {
     res
       .status(200)
       .render("cars", {
-        layout: "layouts/mainLayout",
+        layout: "mainLayout",
         title: "List Car",
         breadcrumbs: ["Cars", "List Car"],
         data: findedCars,
@@ -73,7 +73,7 @@ exports.getAddCarsPage = (req, res) => {
     res
       .status(200)
       .render("addCars", {
-        layout: "layouts/mainLayout",
+        layout: "mainLayout",
         title: "Add New Car",
         breadcrumbs: ["Cars", "List Car", "Add New Car"],
       });
@@ -89,7 +89,7 @@ exports.getEditCarsPage = async (req, res) => {
     res
       .status(200)
       .render("editCars", {
-        layout: "layouts/mainLayout",
+        layout: "mainLayout",
         title: "Add New Car",
         breadcrumbs: ["Cars", "List Car", "Edit Car"],
         data: findedCars,

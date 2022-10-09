@@ -27,10 +27,10 @@
       <div class="card h-100">
         <img src="<%=car.car_photo%>" class="card-img-top mb-5" alt="<%=car.car_photo%>_image"/>
         <div class="card-body p-0">
-          <p style="font-weight: s"><%=car.car_name%> &nbsp; / &nbsp; <%=car.car_size %> <%=car.car_type%></p>
+          <p style="font-weight: 600"> <%=car.car_name%> / <%=car.car_size %> / <%=car.car_type%></p>
           <h5 class="card-title fw-bold mb-3 ">Rp <%= toRupiah(car.car_price, {symbol: null,floatingPoint: 0}) %> / hari</h5>
           
-          <p class="card-text">
+          <p class="card-text" style="font-weight:100">
             <i class="bx bx-time"></i>
             Updated at <%= moment(car.updatedAt).format('DD MMM YYYY, hh.mm') %>
           </p>

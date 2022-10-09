@@ -2,7 +2,7 @@
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="/Cars" style="color:black;text-decoration:none;font-weight:bold">Cars</a></li>
     <li class="breadcrumb-item "><a href="/Cars" style="color:black;text-decoration:none;font-weight:bold">List Cars</a></li>
-    <li class="breadcrumb-item "><a href="#" style="color:black;text-decoration:none">Add New Car</a></li>
+    <li class="breadcrumb-item "><a href="#" style="color:black;text-decoration:none">Edit Car</a></li>
   </ol>
 </nav>
 
@@ -11,7 +11,7 @@
 </div>
 
 
-<form method="POST" action="/api/v1/cars/<%=data.id%>?_method=PUT" id="form" >
+<form action="/api/v1/cars/<%=data.id%>?_method=PUT" method="POST" id="form" enctype="multipart/form-data">
   <div class="row">
     <div class="col-md-6">
       <div class="form-group row align-items-center mt-3">
@@ -20,12 +20,12 @@
         >
         <div class="col-sm-8">
           <input
-            value="<%=data.car_name%>"
             type="text"
             class="form-control"
             id="car_name"
             name="car_name"
-            placeholder="Avanza"
+            placeholder="Motor Apik !"
+            value="<%=data.car_name%> "
             required
           />
         </div>
@@ -36,12 +36,12 @@
         >
         <div class="col-sm-8">
           <input
-          value="<%=data.car_price%>"
             type="number"
             class="form-control"
             id="car_price"
             name="car_price"
             placeholder="Rp 0,-"
+            value="<%=data.car_price%> "
             required
           />
         </div>
@@ -51,7 +51,7 @@
           >Tipe <span>*</span></label
         >
         <div class="col-sm-8">
-          <select class="form-select form-control" name="car_type" id="car_type" value="<%=data.car_type%>">
+          <select class="form-select form-control" name="car_type" id="car_type"  value="<%=data.car_type%>">
             <option value="Sport">Sport</option>
             <option value="Family">Family</option>
             <option value="Classic">Classic</option>
@@ -63,14 +63,14 @@
           >Ukuran <span>*</span></label
         >
         <div class="col-sm-8">
-          <select class="form-select form-control" name="car_size" id="car_size" value="<%=data.car_size%>">
+          <select class="form-select form-control" name="car_size" id="car_size"  value="<%=data.car_size%> ">
             <option value="small">Small</option>
             <option value="medium">Medium</option>
             <option value="large">Large</option>
           </select>
         </div>
       </div>
-      <div class="form-group row mt-3">
+      <div class="form-group row mt-3 ">
         <label for="car_photo" class="col-sm-4 col-form-label"
           >Foto <span>*</span></label>
         <div class="col-sm-8">
@@ -81,6 +81,7 @@
               id="inputGroupFile04"
               name="car_photo"
               accept="image/*"
+              required
             />
 
             <small>File size max. 2MB</small>
@@ -91,9 +92,9 @@
     </div>
   </div>
 </div>
-<div class="form-action" style="margin-top:50vh">
+<div class="form-action" style="margin-top:40vh">
     <a href="/cars" target="#" class="btn btn-outline-primary me-3">Cancel</a>
-    <a href="/cars"><button type="submit" class="btn btn-primary" >Save</button></a>
+    <input href="/cars" type="submit"  class="btn btn-primary" id="btn-submit" value="Save"/>
 </div>
 </div>
 </form>

@@ -32,6 +32,12 @@ app.get("/api/v1", (req, res, next) => {
 app.use("/api/v1/cars", require("./routes/carRoutes.js"));
 
 
+app.use((req, res) => {
+  res.status(404);
+  res.send(`<center><h1>404 Not Found</h1></center>`);
+});
+
+
 //listen
 app.listen(PORT || 3000, () => {
   console.info(`Server allready listening for requests on port ${PORT}...`);
