@@ -10,7 +10,7 @@
   <p align="center">Car Management Dashboard</p>
 </div>
 
-<!-- ABOUT THE PROJECT -->
+## ABOUT THE PROJECT
 
 
 ### Built With
@@ -20,12 +20,12 @@
 - Sequelize
 - Postgres
 
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Tabel database
 
 ![erd](./views/assets/doc/db.png)
 
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 ## Getting Started
