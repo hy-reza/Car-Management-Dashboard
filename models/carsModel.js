@@ -24,7 +24,7 @@ module.exports = (sequelize, DataTypes) => {
       car_photo: {
         type: DataTypes.STRING,
         allowNull: true,
-        defaultValue: "../assets/images/cars/1665158909849-pexels-alexgtacar-1592384.jpg"
+        defaultValue: "../assets/images/cars/undifined_image.jpg"
       },
       car_price: {
         type: DataTypes.INTEGER,
